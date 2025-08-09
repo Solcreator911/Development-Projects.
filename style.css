@@ -1,0 +1,99 @@
+.fullGame {
+  border: 5px solid #ffcbff;
+   background-image: url(img/living.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin: auto;
+  height: 800px;
+  width: 700px;
+  padding: 0;
+}
+
+
+.mainInfo {
+  text-align: center;
+  border: 5px solid #ffcbff;
+}
+
+.MascotInfo {
+  text-align: right;
+  padding-right: 25px;
+  height: 40px;
+}
+
+.mascotLevels {
+  padding-left: 20px;
+  position: relative;
+  top: -55px;
+}
+
+.buttonsBox {
+  width: 255px;
+  height: 200px;
+  top: -5px;
+  position: relative;
+  left: 450px;
+
+}
+
+.upButton,
+.downButton,
+.leftButton,
+.rightButton {
+  width: 60px;
+  height: 60px;
+}
+
+.upButton {
+ left: 90px;
+ position: relative;
+}
+
+.downButton {
+ left: 90px;
+  position: relative;
+  top: 70px;
+
+}
+
+.leftButton {
+  position: relative;
+  left: 10px;
+  top: -115px;
+}
+
+.rightButton {
+  position: relative;
+  right: -169px;
+  top: -55px;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+}
+
+.userActions{
+  margin: auto;
+  width: 300px;
+  height: 600px;
+  position: relative;
+  bottom: -70px;
+  display: flex;
+  gap: 20px;
+  left: -120px;
+}
+
+.ositoFeliz{
+  position: relative;
+  top: -5px;
+  left: 250px;
+  width: 100px;
+  height: 100px;
+}
+.ositoFeliz img{
+  width: 150px;
+  height: 150px;
+}
