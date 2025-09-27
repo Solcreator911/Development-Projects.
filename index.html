@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perritos <3 </title>
+            <link rel="stylesheet" href="estilos.css">
+</head>
+<div id="contenedor">
+    <header>
+        <img id="logo" src="https://p1.develotion.com/logo.jpg" alt="logo" />
+        <nav>
+            <ul id="navPrincipal">
+                <li id="btnSeccionRegistro" class="boton Registro cliente">
+                    <a>Registro</a>
+                </li>
+                <li id="btnSeccionLogin" class="boton Login cliente admin">
+                    <a>Inicio Sesion</a>
+                </li>
+                </li>
+                <li id="btnSeccionInicio" class="boton Inicio cliente">
+                    <a>Inicio</a>
+                </li>
+                <li id="btnSeccionMisContratacionesPaseador" class="boton Contrataciones admin">
+                    <a>Mis contrataciones</a>
+                </li>
+                <li id="btnSeccionEstadisticas" class="boton Estadisticas admin">
+                    <a>Estadisticas</a>
+                </li>
+                <li id="btnSeccionMisContrataciones" class="boton ContratacionesCliente cliente">
+                    <a>Mis contrataciones</a>
+                <li id="btnSeccionInformacion" class="boton Informacion cliente">
+                    <a>Informacion</a>
+                </li>
+                </li>
+                <li id="btnSeccionCerrarSesion" class="boton CerrarSesion cliente admin">
+                    <a>Cerrar Sesion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <section id="seccionRegistro" class="seccion">
+            <h1>Registro</h1>
+
+            <label for="txtUsuarioCliente">Nombre de usuario:</label>
+            <input type="text" id="txtUsuarioCliente" />
+
+            <label for="txtContraseniaCliente">Contraseña:</label>
+            <input type="password" id="txtContraseniaCliente" />
+
+            <label for="txtMascotaCliente">Nombre Mascota:</label>
+            <input type="text" id="txtMascotaCliente" />
+
+            <label for="slcOpciones">Seleccione el tamaño:</label>
+            <select id="slcOpciones">
+                <option value="Selecciona">Selecciona</option>
+                <option value="Grande">Grande</option>
+                <option value="Mediano">Mediano</option>
+                <option value="Chico">Chico</option>
+            </select>
+            <input type="button" value="Registro" id="btnRegistro" /><br />
+
+            <p id="pRegistroCliente"></p>
+            <p id="pErrorRegistro"></p>
+        </section>
+
+
+        <section id="seccionLogin" class="seccion">
+            <h2>Inicio Sesion</h2>
+
+            <label for="txtInicioUsuario">Username:</label>
+            <input type="text" id="txtInicioUsuario" />
+
+            <label for="txtInicioContrasena">Password:</label>
+            <input type="password" id="txtInicioContrasena" />
+
+            <input type="button" value="Iniciar Sesion" id="btnInicioSesion" /><br />
+
+            <p id="pErrorInicio"></p>
+
+
+            <hr />
+
+        </section>
+
+        <section id="seccionInicio" class="seccion">
+            <!-- TABLA -->
+            <h3>Contrataciones</h3>
+
+            <select id="slcContratacionCliente">
+
+                <input type="button" value="Contratar" id="btnContratacionDePaseador" /><br />
+
+                <p id="pErrorContratacion"></p>
+                <p id="pContratacionClienteInfo"> </p>
+            </select>
+        </section>
+
+        <section id="seccionMisContrataciones" class="seccion">
+            <h4>Mis Contrataciones</h4>
+            <table id="tblHistorialContrataciones">
+                <tbody id="tblContrataciones"></tbody>
+                 <th>Nombre Paseador</th>
+                <th>Estado</th>
+                <input type="button" value="Cancelar" id="btnCancelarContratacion">
+            </table>
+            <p id="pMensajeCancelar"></p>
+        </section>
+
+        <section id="seccionInformacion" class="seccion">
+            <h4>Paseadores Actuales</h4>
+            <table border="1" id="tblInformacionPaseadores">
+
+            </table>
+          
+        </section>
+
+          
+        <section id="seccionMisContratacionesPaseador" class="seccion">
+            <h2>Mis Contrataciones</h2>
+            <table border="1" id="tblProcesarContrataciones">
+            
+               </table>
+        </section>
+
+        <section id="seccionEstadisticas" class="seccion">
+            <h2>Estadisticas</h2>
+
+            <p id="pCuposOcupados"></p>
+            <p id="pCuposMaximos"></p>
+            <p id="pPorcentaje"></p>
+         
+            <h2>¡Mascotas a pasear!</h2>
+            <table border="1" id="tblMascotasAsignadas">
+               
+            </table>
+        </section>
+        <script src="java/codigo.js"></script>
+    </body>
+
+</html>
