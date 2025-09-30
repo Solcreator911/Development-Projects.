@@ -1,6 +1,12 @@
-# Development-Project
-School and self projects.
-These projects show my growth and my coding practices.
-I show in these projects my hability to understand each theoretical foundation that JavaScript has.
-From the basics if/else statments, for loops, arrays, to object oriented programming, etc...
-Also my CSS3 advance in layout technique, grids, bootstrap.
+Implementación y despliegue de proyecto web con control de versiones en Git/GitHub y publicación en Azure Static Web Apps.
+LINK: https://blue-rock-038bf3110.1.azurestaticapps.net
+
+Proyecto para generar la funcionalidad de un sitio
+web, en el cual se implementaron los conocimientos
+básicos de JS.
+
+Programacion Orientada a Objetos (Clases, objetos)
+arrays y en especifico el método push, manejo de
+estructuras de control (if/else, bucle for)
+Isando
+solo en este caso Javascript/HTML
