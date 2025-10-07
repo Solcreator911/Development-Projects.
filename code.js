@@ -124,7 +124,7 @@ class Sistema {
             new Cliente("Savanna", "contrasena5", "Rocky", "Mediano"),
             new Cliente("Andaluz", "contrasena6", "Thor", "Grande"),
             new Cliente("Javier", "contrasena7", "Zeus", "Pequeño"),
-            new Cliente("Sol", "contrasena8", "Hera", "Mediano"),
+            new Cliente("Sol", "Contrasena8", "Hera", "Mediano"),
             new Cliente("Ana", "contrasena9", "Athena", "Grande"),
             new Cliente("Guatemala", "contrasena10", "Apolo", "Pequeño"),
             new Cliente("Sieun", "contrasena11", "Artemisa", "Mediano"),
