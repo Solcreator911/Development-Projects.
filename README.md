@@ -1,3 +1,7 @@
+//ARREGLANDO BUGS
+
+PARA PROBAR LAS FUNCIONES SEÑOR/A RECLUTADOR UTILICE ESTE USUARIO: Sol ; CONTRASEÑA: Contrasena8 = Sea libre de equivocarse para ver todas las funciones.
+
 Implementación y despliegue de proyecto web con control de versiones en Git/GitHub y publicación en Azure Static Web Apps.
 LINK: https://blue-rock-038bf3110.1.azurestaticapps.net
 
