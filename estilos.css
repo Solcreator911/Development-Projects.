@@ -8,6 +8,11 @@ body {
   margin: 0;
 }
 
+#logo {
+  max-width: 150px;
+
+}
+
 /* Estilos contenedor de todo el documento */
 #contenedor {
   width: 100%;
@@ -75,7 +80,7 @@ header img {
 }
 
 header {
-  background-color: #FD3456;
+  background-color: #ffc107;
   clear: both;
   color: fafafa;
   text-transform: uppercase;

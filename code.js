@@ -30,7 +30,6 @@ function mostrarSeccion() {  //FUNCION PARA MOSTRAR LA SECCION CORRESPONDIENTE A
 
     pasarASeccion(idSeccion) //LLAMO A LA FUNCION pasarASeccion CON EL ID DE LA SECCION QUE QUIERO MOSTRAR
 
-
 }
 
 
@@ -252,9 +251,13 @@ mostrarBotonesMenu("Registro"); //MUESTRO LOS BOTONES DE INICIO SESION Y REGISTR
 mostrarBotonesMenu("Login");
 pasarASeccion("seccionLogin");
 
+// Al cargar la página, verificamos si hay clientes guardados
+let clientesGuardados = JSON.parse(localStorage.getItem("clientes")) || [];
+miSistema.clientes = clientesGuardados; // Restaurar los clientes previos
+
 
 //REGISTRO CLIENTE
-document.querySelector("#btnRegistro").addEventListener("click", registroCliente);
+document.querySelector("#btnRegistroUsuario").addEventListener("click", registroCliente);
 function registroCliente() {
     let usuarioCliente = document.querySelector("#txtUsuarioCliente").value
     let contraseniaCliente = document.querySelector("#txtContraseniaCliente").value
@@ -284,8 +287,10 @@ function registroCliente() {
     let nuevoCliente = new Cliente(usuarioCliente, contraseniaCliente, mascotaCliente, tamanoMascota); //CREANDO UN CLIENTE NUEVO
     miSistema.clientes.push(nuevoCliente); //AGREGANDO EL CLIENTE AL ARRAY
 
-
     document.querySelector("#pRegistroCliente").innerHTML = "Registro exitoso.";
+
+    localStorage.setItem("clientes",JSON.stringify(miSistema.clientes));
+    console.log(localStorage.getItem("clientes"));
 
 
     document.querySelector("#txtUsuarioCliente").value = "";
@@ -295,8 +300,7 @@ function registroCliente() {
     document.querySelector("#pErrorRegistro").innerHTML = "";
 
 
-    mostrarSeccion();
-    pasarASeccion("seccionLogin");
+   
 }
 
 
@@ -443,7 +447,7 @@ function contratarPaseador() {
 
 document.querySelector("#btnCancelarContratacion").addEventListener("click", cancelarContratacion)
 
-function cancelarContratacion() {
+function  cancelarContratacion() {
     document.querySelector("#pMensajeCancelar").innerHTML = "";
     for (let i = 0; i < miSistema.contrataciones.length; i++) {
         let contratacionActual = miSistema.contrataciones[i];
