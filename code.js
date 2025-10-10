@@ -289,7 +289,7 @@ function registroCliente() {
 
     document.querySelector("#pRegistroCliente").innerHTML = "Registro exitoso.";
 
-    localStorage.setItem("clientes",JSON.stringify(miSistema.clientes));
+    localStorage.setItem("clientes", JSON.stringify(miSistema.clientes));
     console.log(localStorage.getItem("clientes"));
 
 
@@ -300,7 +300,7 @@ function registroCliente() {
     document.querySelector("#pErrorRegistro").innerHTML = "";
 
 
-   
+
 }
 
 
@@ -400,6 +400,7 @@ function cargarComboPaseadores() {
 
 function tablaContrataciones() {
     let tblContrataciones = "";
+    let botonCancelar = document.querySelector("#btnCancelarContratacion")
     for (let i = 0; i < miSistema.contrataciones.length; i++) {
         let contratacionActual = miSistema.contrataciones[i];
         if (contratacionActual.cliente.id === usuarioLogeado.id) {
@@ -407,16 +408,24 @@ function tablaContrataciones() {
                 <td>${contratacionActual.paseador.nombre}</td>         
                 <td>${contratacionActual.estado}</td>        
             </tr>`;
+            botonCancelar.style.display = "block"
+        }else {
+            botonCancelar.style.display = "none"
         }
     }
 
     document.querySelector("#tblHistorialContrataciones").innerHTML = tblContrataciones;
 }
 
+// Al cargar la página, verificamos si hay clientes guardados
+let contratacionesGuardados = JSON.parse(localStorage.getItem("contrataciones")) || [];
+miSistema.contrataciones = contratacionesGuardados; // Restaurar las contrataciones previos
+
 document.querySelector("#btnContratacionDePaseador").addEventListener("click", contratarPaseador);
 
 function contratarPaseador() {
     let selectPaseador = Number(document.querySelector("#slcContratacionCliente").value)
+  
     let paseadorSeleccionado = miSistema.buscarPaseador(selectPaseador);
     document.querySelector("#pContratacionClienteInfo").innerHTML = ""
     document.querySelector("#pErrorContratacion").innerHTML = ""
@@ -433,30 +442,30 @@ function contratarPaseador() {
 
     }
     if (tieneContratacion) {
-        document.querySelector("#pErrorContratacion").innerHTML = "Usted ya a realizado una contratacion";
+        document.querySelector("#pErrorContratacion").innerHTML = "Usted ya a realizado una contratación";
     } else {
         let miContratacion = new Contrataciones(paseadorSeleccionado, usuarioLogeado);//CREANDO UN NUEVO CLIENTE CON LOS DATOS INGRESADOS
         miSistema.contrataciones.push(miContratacion); //AGREGANDO EL NUEVO CLIENTE A LA LISTA DE CLIENTES DEL SISTEMA
         document.querySelector("#pContratacionClienteInfo").innerHTML = `Contratacion exitosa. Usted a contratado a ${paseadorSeleccionado.nombre}`
+        localStorage.setItem("contratacion", JSON.stringify(miSistema.contrataciones))
     }
-
     tablaContrataciones()
+    document.querySelector("#pMensajeCancelar").innerHTML = "";
 
 }
+console.log(contratacionesGuardados);
 
 
 document.querySelector("#btnCancelarContratacion").addEventListener("click", cancelarContratacion)
 
-function  cancelarContratacion() {
-    document.querySelector("#pMensajeCancelar").innerHTML = "";
+function cancelarContratacion() {
+  
     for (let i = 0; i < miSistema.contrataciones.length; i++) {
         let contratacionActual = miSistema.contrataciones[i];
         if (contratacionActual.cliente.id === usuarioLogeado.id) {
             miSistema.contrataciones.splice(i, 1);
-
-            document.querySelector("#pMensajeCancelar").innerHTML = "No hay contrataciones pendientes";
-
-        }
+             document.querySelector("#pMensajeCancelar").innerHTML = "No hay contrataciones pendientes";
+        } 
 
     }
     tablaContrataciones()
