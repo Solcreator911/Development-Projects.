@@ -450,7 +450,7 @@ function contratarPaseador() {
     document.querySelector("#pMensajeCancelar").innerHTML = "";
 
 }
-console.log(contratacionesGuardados);
+
 
 
 document.querySelector("#btnCancelarContratacion").addEventListener("click", cancelarContratacion)
