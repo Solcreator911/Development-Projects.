@@ -417,9 +417,7 @@ function tablaContrataciones() {
     document.querySelector("#tblHistorialContrataciones").innerHTML = tblContrataciones;
 }
 
-// Al cargar la página, verificamos si hay clientes guardados
-let contratacionesGuardados = JSON.parse(localStorage.getItem("contrataciones")) || [];
-miSistema.contrataciones = contratacionesGuardados; // Restaurar las contrataciones previos
+
 
 document.querySelector("#btnContratacionDePaseador").addEventListener("click", contratarPaseador);
 
@@ -447,7 +445,6 @@ function contratarPaseador() {
         let miContratacion = new Contrataciones(paseadorSeleccionado, usuarioLogeado);//CREANDO UN NUEVO CLIENTE CON LOS DATOS INGRESADOS
         miSistema.contrataciones.push(miContratacion); //AGREGANDO EL NUEVO CLIENTE A LA LISTA DE CLIENTES DEL SISTEMA
         document.querySelector("#pContratacionClienteInfo").innerHTML = `Contratacion exitosa. Usted a contratado a ${paseadorSeleccionado.nombre}`
-        localStorage.setItem("contratacion", JSON.stringify(miSistema.contrataciones))
     }
     tablaContrataciones()
     document.querySelector("#pMensajeCancelar").innerHTML = "";
