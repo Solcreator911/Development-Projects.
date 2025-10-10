@@ -1,6 +1,10 @@
-//ARREGLANDO BUGS
+//Mejorando funciones
 
-PARA PROBAR LAS FUNCIONES SEÑOR/A RECLUTADOR UTILICE ESTE USUARIO: Sol ; CONTRASEÑA: Contrasena8 = Sea libre de equivocarse para ver todas las funciones.
+SEÑOR/A RECLUTADOR:
+
+PARA PROBAR LAS FUNCIONES LE INVITO A REGISTRARSE COMO CLIENTE EN EL SITIO; CREE UN USUARIO Y UNA CONTRASEÑA. LA MISMA DEBE SER MAYOR A 5 CARACTERES, UNA MAYUSCULA Y UN NUMERO. INICIE SESION Y SEA LIBRE DE PROBAR Y EQUIVOCARSE PARA VER EL FUNCIONAMIENTO.
+INICIE SESION COMO PASEADOR --> "maria123" , "Paseos1"
+ES UN SITIO WEB MUY SENCILLO EN EL CUAL SOLO REALIZAMOS EL FUNCIONAMIENTO, EL CODIGO CSS FUE BRINDADO POR LA UNIVERSIDAD.
 
 Implementación y despliegue de proyecto web con control de versiones en Git/GitHub y publicación en Azure Static Web Apps.
 LINK: https://blue-rock-038bf3110.1.azurestaticapps.net
@@ -12,5 +16,4 @@ básicos de JS.
 Programacion Orientada a Objetos (Clases, objetos)
 arrays y en especifico el método push, manejo de
 estructuras de control (if/else, bucle for)
-Isando
-solo en este caso Javascript/HTML
+Solo se utilizo HTML/JS por parte de la creadora.
